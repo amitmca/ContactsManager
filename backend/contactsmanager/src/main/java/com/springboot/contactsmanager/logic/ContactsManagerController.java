@@ -40,7 +40,7 @@ public class ContactsManagerController {
         contact.setEmail(contactDetails.getEmail());
         contact.setFirstName(contactDetails.getFirstName());
         contact.setLastName(contactDetails.getLastName());
-        contact.setNumber(contactDetails.getNumber());
+        contact.setContactNumber(contactDetails.getContactNumber());
 
         Contact updatedContact = contactRepository.save(contact);
         return updatedContact;
@@ -51,7 +51,7 @@ public class ContactsManagerController {
         Contact contact = contactRepository.findById(contactId)
                 .orElseThrow(() -> new  Exception()); //check if the contact exists or not
         contactRepository.deleteById(contactId); //delete the contact from database
-        return  ResponseEntity.ok().build(); 
+        return  ResponseEntity.ok().build();
     }
 
     //get a contact by id

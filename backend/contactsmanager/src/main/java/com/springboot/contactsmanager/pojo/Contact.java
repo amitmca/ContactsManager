@@ -15,7 +15,7 @@ public class Contact {
     @NotBlank
     private String lastName;
     @NotBlank
-    private String number;
+    private String contactNumber;
     private String email;
 
     private Contact(){}
@@ -32,9 +32,7 @@ public class Contact {
         return lastName;
     }
 
-    public String getNumber() {
-        return number;
-    }
+
 
     public String getEmail() {
         return email;
@@ -52,8 +50,12 @@ public class Contact {
         this.lastName = lastName;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
     public void setEmail(String email) {
