@@ -1,0 +1,29 @@
+.nav-bar{
+    height: 75px;
+    width: 100%;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: chocolate;
+}
+.left-title{
+    float: left;
+    text-decoration: none;
+    color: black;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: 55px;
+    font-weight: bold;
+}
+
+.right-title {
+    float: left;
+    position: relative;    
+    color: black;    
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 25px;
+    padding: 5px;
+}

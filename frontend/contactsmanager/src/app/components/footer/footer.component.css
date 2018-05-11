@@ -1,0 +1,23 @@
+.footer{
+    height: 75px;
+    width: 100%;
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: chocolate;
+    bottom: 0;
+    position: absolute;
+}
+
+.left-title{
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin-top: 25px;
+    margin-left: 55px;
+    font-weight: bold;
+}
