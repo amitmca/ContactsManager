@@ -3,6 +3,7 @@ package com.springboot.contactsmanager.logic;
 import com.springboot.contactsmanager.data.ContactRepository;
 import com.springboot.contactsmanager.pojo.Contact;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -30,7 +31,7 @@ public class ContactsManagerController {
     }
 
     //update an existing contact
-    @PutMapping("/contact/{id}")
+    @PutMapping("/contacts/{id}")
     public Contact updateContact(@PathVariable(value="id")Long contactId, @Valid @RequestBody Contact contactDetails) throws Exception {
         //find if the contact exists
         Contact contact = contactRepository.findById(contactId)
@@ -45,7 +46,13 @@ public class ContactsManagerController {
         return updatedContact;
     }
     //delete a contact
-    
+    @DeleteMapping("/contacts/{id}")
+    public ResponseEntity<?> deleteContact(@PathVariable(value="id")Long contactId) throws Exception { //take specific id of the contact that needs to be deleted
+        Contact contact = contactRepository.findById(contactId)
+                .orElseThrow(() -> new  Exception()); //check if the contact exists or not
+        contactRepository.deleteById(contactId); //delete the contact from database
+        return  ResponseEntity.ok().build(); 
+    }
 
     //get a contact by id
     @GetMapping("/contacts/{id}")
