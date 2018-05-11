@@ -21,3 +21,17 @@
     background-color: chocolate;
     padding: 10px;
 }
+
+.contact-details-info{
+    padding: 20px 30px;
+	border-right: 1px solid chocolate;
+	border-top: 1px solid chocolate;
+	border-bottom: 1px solid chocolate;
+    border-left: 1px solid chocolate;
+    margin: 0 0 20px;
+    font-family: 'Courgette', cursive;
+}
+
+input[type="submit"]:disabled {
+    background: gray;
+}

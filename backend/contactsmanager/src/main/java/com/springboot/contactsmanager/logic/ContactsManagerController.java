@@ -36,7 +36,7 @@ public class ContactsManagerController {
         //find if the contact exists
         Contact contact = contactRepository.findById(contactId)
                 .orElseThrow(() -> new  Exception());
-
+        contact.setId(contactId);
         contact.setEmail(contactDetails.getEmail());
         contact.setFirstName(contactDetails.getFirstName());
         contact.setLastName(contactDetails.getLastName());

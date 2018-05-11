@@ -36,12 +36,30 @@ export class ContactsManager {
         this.options.withCredentials = true;
         return this._http.get(this.baseUrl+'/contacts/'+id, this.options)
         .map((response: Response) => {
-            console.log("inside get contact by id method");
-            console.log(response);
+            // console.log("inside get contact by id method");
+            // console.log(response);
             return response.json();
         })
     }
 
+    updateContact(contactId, contact){
+        this.options.withCredentials = true;
+        //console.log(contact.id);
+        return this._http.put(this.baseUrl+'/contacts/'+ contactId, contact, this.options)
+        .map((response: Response) => {            
+            return response.json();
+        })
+    }
+
+    deleteContact(contactId){
+        this.options.withCredentials = true;
+        //console.log(contact.id);
+        return this._http.delete(this.baseUrl+'/contacts/'+ contactId,  this.options)
+        .map((response: Response) => { 
+            //console.log(response);           
+            return response;
+        })
+    }
 
 
 }

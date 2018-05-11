@@ -21,8 +21,8 @@
           </div>
           <div class="form-group">
             <label>Phone Number *</label>
-            <input type="text" ngModel name="contactNumber" id="contactNumber" #contactNumber="ngModel" placeholder="Contact Number"
-              class="form-control" required maxlength="12" />
+            <input type="number" ngModel name="contactNumber" id="contactNumber" #contactNumber="ngModel" placeholder="Contact Number"
+              class="form-control" required maxlength="10" />
             <span class="help-block" *ngIf="!contactNumber.valid && contactNumber.touched">
               Please enter Contact Number!
             </span>
@@ -35,21 +35,44 @@
             </span>
           </div>
           <div class="form-group">
-            <input type="hidden" ngModel name="_id" id="_id" #codeId="ngModel" />
+            <input type="hidden" ngModel name="id" id="id" #contactId="ngModel" />
           </div>
           <div class="form-group">
             <input type="submit" class="submit-btn" value="Add Contact" [disabled]="!f.valid" />
           </div>
         </form>
         <div *ngIf="successFlag" class="form-success text-left">
-            {{successMsg}}
-          </div>
-          <div *ngIf="exists" class="form-error text-left">
-            {{errorMsg}}
-          </div>
+          {{successMsg}}
+        </div>
+        <div *ngIf="exists" class="form-error text-left">
+          {{errorMsg}}
+        </div>
       </div>
       <div class="view-contacts col-md-6">
-
+        <h3>Contacts Information</h3>
+        <div class="contact-details-info" *ngFor=" let contact of contacts">
+          <div class="row">
+            <div class="col-sm-9">
+              Contact Name: {{contact.firstName}} {{contact.lastName}}
+              <br> Contact Number: {{contact.contactNumber}}
+              <br> Email: {{contact.email}}
+              <br>
+            </div>
+            <div class="col-sm-3">
+              
+                <div class="update-contact">
+                  <button (click)="updateContact(contact)" class="btn btn-primary"> Update</button>
+                </div><br>
+                <div class="delete-contact">
+                  <button (click)="deleteContact(contact.id)" class="btn btn-primary">Delete</button>
+                </div>
+              
+            </div>
+          </div>
+        </div>
+        <div *ngIf="errorFlag" class="form-error text-left">
+          {{errorMsg}}
+        </div>
       </div>
     </div>
   </div>
