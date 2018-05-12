@@ -43,4 +43,3 @@ ng serve
 8. Create a DB named 'contacts' in MySQL and add the corresponding username and password in application.properties file
 
 <img src="https://i.imgur.com/a/srmWcbK.gif" alt="Video Walkthrough"/>
-
