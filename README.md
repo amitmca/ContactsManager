@@ -42,5 +42,5 @@ ng serve
 7. Build and run the server
 8. Create a DB named 'contacts' in MySQL and add the corresponding username and password in application.properties file
 
-<img src="https://imgur.com/a/srmWcbK.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="https://i.imgur.com/a/srmWcbK.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
