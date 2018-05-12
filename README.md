@@ -24,8 +24,8 @@ Links for reference:
 
 2. Clone the project from GitHub Repository and Install all the necessary packages
 ```sh
-git clone https://github.com/neu-mis-info6150-spring-2018/final-project-techcratofficial.git
-cd final-project-techcratofficial
+git clone https://github.com/varsha-jain/ContactsManager.git
+cd ContactsManager
 npm install
 ```
 3. Start node.js server
@@ -42,4 +42,4 @@ ng serve
 7. Build and run the server
 8. Create a DB named 'contacts' in MySQL and add the corresponding username and password in application.properties file
 
-<img src='https://imgur.com/a/PPOdBiU' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/PPOdBiU.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
