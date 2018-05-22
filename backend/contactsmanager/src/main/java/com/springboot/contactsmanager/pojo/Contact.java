@@ -15,6 +15,7 @@ public class Contact {
     @NotBlank
     private String lastName;
     @NotBlank
+    @Column(unique = true)
     private String contactNumber;
     private String email;
 
